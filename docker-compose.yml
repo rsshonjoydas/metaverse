@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  next-boilerplate:
+    container_name: next-boilerplate
+    restart: unless-stopped
+    build:
+      context: .
+    ports:
+      - 3000:3000
+    env_file:
+      - ./.env.local
+    networks:
+      - mydockernet
+
+networks:
+  mydockernet:
+    driver: bridge

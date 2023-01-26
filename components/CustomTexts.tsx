@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/no-array-index-key */
 
 'use client';
@@ -24,4 +25,18 @@ export const TypingText: React.FC<Props> = ({ title, textStyle }) => (
   </motion.p>
 );
 
-export const TitleText = () => <h2>Title Text</h2>;
+interface TitleTextProps {
+  title: JSX.Element;
+  textStyle: string;
+}
+
+export const TitleText: React.FC<TitleTextProps> = ({ title, textStyle }) => (
+  <motion.h2
+    variants={textVariant2}
+    initial='hidden'
+    whileInView='show'
+    className={`mt-[8px] font-bold md:text-[64px] text-[40px] text-white ${textStyle}`}
+  >
+    {title}
+  </motion.h2>
+);

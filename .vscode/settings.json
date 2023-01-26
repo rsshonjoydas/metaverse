@@ -4,7 +4,6 @@
   "workbench.colorTheme": "Atom One Dark",
   // Secondary Theme
   // "workbench.colorTheme": "One Dark Pro",
-
   // config related to code formatting
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
@@ -33,16 +32,14 @@
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
     "plaintext": "html",
-    "javascript":"javascript"  
+    "javascript": "javascript"
   },
   "editor.quickSuggestions": {
-      "other": true,
-      "comments": true,
-      "strings": true
+    "other": true,
+    "comments": true,
+    "strings": true
   },
-  "tailwindCSS.classAttributes": [
-      "class",
-      "className",
-      "ngClass"
-  ]
+  "tailwindCSS.classAttributes": ["class", "className", "ngClass"],
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

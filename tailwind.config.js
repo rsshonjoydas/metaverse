@@ -1,9 +1,18 @@
-/* eslint-disable global-require */
+/** @type {import('tailwindcss').Config} */
+const tailwindcss = require('tailwindcss');
+const postcss = require('postcss');
+const autoprefixer = require('autoprefixer');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-          content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}'],
-  darkMode: 'class',
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './sections/**/*.{js,ts,jsx,tsx}',
+    './styles/**/*.{js,ts,jsx,tsx}',
+  ],
+  mode: 'jit',
   theme: {
     extend: {
       colors: {
@@ -102,5 +111,5 @@ module.exports = {
       boxShadow: ['dark'],
     },
   },
-  plugins: [require('tailwindcss'), require('postcss'), require('autoprefixer')],
+  plugins: [tailwindcss, postcss, autoprefixer],
 };

@@ -41,14 +41,6 @@ p::selection {
   color: #000;
 }
 
-h1 {
-  @apply text-2xl text-primary;
-}
-
-p {
-  @apply text-base text-slate-500 dark:text-gray-200;
-}
-
 button {
   width: auto;
   border: none;
